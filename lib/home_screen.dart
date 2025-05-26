@@ -46,13 +46,19 @@ class _HomeScreenState extends State<HomeScreen> {
             markerId: MarkerId('my-location'),
             position: LatLng(22.863353, 89.523078),
             icon: BitmapDescriptor.defaultMarker,
-            infoWindow: InfoWindow(title: 'My Location'),
+            infoWindow: InfoWindow(
+              title: 'My current location',
+              snippet: 'Lat: 22.863353, Lng: 89.523078',
+            ),
           ),
           Marker(
             markerId: MarkerId('drag-location'),
             position: LatLng(22.869242863362874, 89.52570464462042),
             icon: BitmapDescriptor.defaultMarker,
-            infoWindow: InfoWindow(title: 'Drag Location'),
+            infoWindow: InfoWindow(
+              title: 'Drag location',
+              snippet: 'Lat: 22.869242863362874, Lng: 89.52570464462042',
+            ),
             draggable: true,
             onDrag: (LatLng position) {},
             onDragStart: (LatLng position) {},
