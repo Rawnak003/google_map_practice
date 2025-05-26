@@ -17,8 +17,7 @@ class LocatorService {
     _onLocationPermissionAndServiceEnabled(() {
       Location.instance.changeSettings(
         accuracy: LocationAccuracy.high,
-        interval: 1000,
-        distanceFilter: 3,
+        interval: 10000, // Fetch the user current location after every 10 seconds
       );
       Location.instance.onLocationChanged.listen((LocationData location) {
         currentLocation = location;
